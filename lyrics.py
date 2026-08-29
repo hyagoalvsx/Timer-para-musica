@@ -1,7 +1,7 @@
 import time
 import sys
 
-VERMELHO = "\033[31m"
+DOURADO = "\033[33m"
 RESET = "\033[0m"
 
 def carregar_letras(arquivo):
@@ -30,7 +30,7 @@ def carregar_letras(arquivo):
 
 def escrever_suave(texto, velocidade=0.035):
     for caractere in texto:
-        sys.stdout.write(VERMELHO + caractere + RESET)
+        sys.stdout.write(DOURADO + caractere + RESET)
         sys.stdout.flush()
         time.sleep(velocidade)
     print()
@@ -43,11 +43,11 @@ def tocar_letras(letras):
             time.sleep(0.01)
         escrever_suave(texto)
 
-print(VERMELHO + "══════════════════════════════════════" + RESET)
-print(VERMELHO + " MANDINGA - ANITTA, MARINA SENA" + RESET)
-print(VERMELHO + "══════════════════════════════════════" + RESET)
+print(DOURADO + "═══════════════════════════════════════════════" + RESET)
+print(DOURADO + " POTE DE OURO (part. Priscila Senna) - Liniker" + RESET)
+print(DOURADO + "═══════════════════════════════════════════════" + RESET)
 
 time.sleep(1)
-letras = carregar_letras("mandinga.txt")
+letras = carregar_letras("potedeouro.txt")
 tocar_letras(letras)
 time.sleep(2)
